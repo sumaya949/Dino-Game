@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cp1ts28daxf5l"]
+
+[ext_resource type="Texture2D" uid="uid://r7apkwmsnxov" path="res://pixil-frame-0 (12).png" id="1_1di36"]
+
+[node name="Rock" type="Area2D" unique_id=1651236975]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=255473285]
+texture_filter = 1
+position = Vector2(-99, -154)
+scale = Vector2(6, 6)
+texture = ExtResource("1_1di36")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2029765873]
+position = Vector2(-5, -56.000015)
+scale = Vector2(6, 6)
+polygon = PackedVector2Array(1, -3, -3, -2, -6, 0, -10, 2, -11, 8, -11, 12, -9, 14, -5, 14, 12, 14, 12, 12, 12, 9, 11, 7, 10, 5, 7, 3, 4, -1)

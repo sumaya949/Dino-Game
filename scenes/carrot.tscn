@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bv7t2enxbp4y4"]
+
+[ext_resource type="Texture2D" uid="uid://bfqf8ravj6kat" path="res://assets/carrot spritesheet.png" id="1_btq7l"]
+
+[node name="Carrot" type="Area2D" unique_id=1822191312]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1974689219]
+texture_filter = 1
+position = Vector2(-79.00003, -81.00003)
+scale = Vector2(5, 5)
+texture = ExtResource("1_btq7l")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1579866610]
+position = Vector2(-76.00001, -86)
+scale = Vector2(5, 5)
+polygon = PackedVector2Array(20, 3.1999998, 17.799988, 2.7999992, 13.999985, 2.5999985, 11.599983, 2.2000008, 12.599983, 2.7999992, 10.399986, 4.200001, 10.599983, 6.799999, 8.599983, 12.799999, 9.799988, 15.600002, 11.399986, 24.600002, 12.199989, 27.2, 13.600001, 28.8, 17.2, 29.199997, 20.59999, 19.199986, 22.999992, 14.799986, 19.599983, 8.200001, 19.800001, 5.799999)

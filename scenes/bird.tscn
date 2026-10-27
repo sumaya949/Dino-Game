@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://dbr54ukrxuynr"]
+
+[ext_resource type="Script" uid="uid://dr1yg3tfru2vu" path="res://scenes/bird.gd" id="1_3po83"]
+[ext_resource type="Texture2D" uid="uid://c5nlwnt1lhgy5" path="res://assets/bird spritesheet.png" id="1_kqhkv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3po83"]
+atlas = ExtResource("1_kqhkv")
+region = Rect2(1, 0, 31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hq4t0"]
+atlas = ExtResource("1_kqhkv")
+region = Rect2(32, 0, 31, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cdw3c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3po83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hq4t0")
+}],
+"loop": 1,
+"name": &"flying",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tlnpn"]
+radius = 6.0
+height = 20.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_isc7l"]
+size = Vector2(6, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlnpn"]
+size = Vector2(11, 11)
+
+[node name="Area2D" type="Area2D" unique_id=1231822311]
+scale = Vector2(4, 4)
+script = ExtResource("1_3po83")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1492894287]
+texture_filter = 1
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_cdw3c")
+animation = &"flying"
+autoplay = "flying"
+frame = 1
+frame_progress = 0.3432567
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=312338800]
+position = Vector2(-4, -3)
+shape = SubResource("CapsuleShape2D_tlnpn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1643205951]
+position = Vector2(-11, -5)
+shape = SubResource("RectangleShape2D_isc7l")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=925560406]
+position = Vector2(5.5, -0.5)
+shape = SubResource("RectangleShape2D_tlnpn")

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cjpk4kech8tei"]
+
+[ext_resource type="Texture2D" uid="uid://mxnaqmtbtokr" path="res://tile_1.png" id="1_mf8o2"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tlnpn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_isc7l"]
+size = Vector2(1030.7693, 32)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1958979632]
+physics_material_override = SubResource("PhysicsMaterial_tlnpn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1602749784]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-686, -96)
+scale = Vector2(4.701563, 3)
+texture = ExtResource("1_mf8o2")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 640, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1255223159]
+position = Vector2(816.00006, -49)
+scale = Vector2(2.925, 3)
+shape = SubResource("RectangleShape2D_isc7l")

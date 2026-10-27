@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cqyaaclo5irrv"]
+
+[ext_resource type="Script" uid="uid://mgbhch2pq2dg" path="res://instructions.gd" id="1_h8hbf"]
+[ext_resource type="Texture2D" uid="uid://byqmmgq5t3op6" path="res://assets/pixil-frame-0 (15).png" id="2_ne5nb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmsd0"]
+bg_color = Color(0.21176471, 0.11372549, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_isc7l"]
+bg_color = Color(0.14117648, 0.07058824, 0, 1)
+
+[node name="instructions" type="Node2D" unique_id=1233405836]
+script = ExtResource("1_h8hbf")
+
+[node name="PixilFrame0(15)" type="Sprite2D" parent="." unique_id=2017262489]
+texture_filter = 1
+position = Vector2(579.5, 323.5)
+scale = Vector2(3.621875, 3.6166663)
+texture = ExtResource("2_ne5nb")
+
+[node name="back1" type="Button" parent="." unique_id=888592615]
+offset_left = 696.0
+offset_top = 550.0
+offset_right = 1126.0
+offset_bottom = 626.0
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_rmsd0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_isc7l")
+text = "GO BACK?"
+
+[connection signal="pressed" from="back1" to="." method="_on_back_1_pressed"]

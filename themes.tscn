@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c2yh4ip6lf0ih"]
+
+[ext_resource type="Script" uid="uid://3gnh56yeovsx" path="res://themes.gd" id="1_ewbgl"]
+[ext_resource type="Texture2D" uid="uid://bfj84h1anl0ye" path="res://scenes/pixil-frame-0 (16).png" id="2_u0y5m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_isc7l"]
+bg_color = Color(0.21176471, 0.11372549, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tlnpn"]
+bg_color = Color(0.14117648, 0.07058824, 0, 1)
+
+[node name="Themes" type="Node2D" unique_id=1805440790]
+script = ExtResource("1_ewbgl")
+
+[node name="PixilFrame0(16)" type="Sprite2D" parent="." unique_id=165060586]
+texture_filter = 1
+position = Vector2(576, 325.00003)
+scale = Vector2(3.5875003, 3.6)
+texture = ExtResource("2_u0y5m")
+
+[node name="jet_mode" type="CheckButton" parent="." unique_id=864815656]
+texture_filter = 1
+offset_left = 167.0
+offset_top = 204.0
+offset_right = 434.0
+offset_bottom = 291.0
+scale = Vector2(3, 3)
+theme_override_font_sizes/font_size = 27
+text = "JETPACK MODE?"
+
+[node name="Button" type="Button" parent="." unique_id=1004561432]
+offset_left = 702.0
+offset_top = 536.0
+offset_right = 1120.0
+offset_bottom = 622.0
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_isc7l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tlnpn")
+text = "GO BACK?"
+
+[connection signal="pressed" from="jet_mode" to="." method="_on_check_button_pressed"]
+[connection signal="pressed" from="jet_mode" to="." method="_on_jet_mode_pressed"]
+[connection signal="toggled" from="jet_mode" to="." method="_on_jet_mode_toggled"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
